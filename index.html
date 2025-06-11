@@ -144,6 +144,42 @@
         display: none;
       }
     }
+.project-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  max-width: 90vw;
+}
+
+.project-card {
+  flex: 0 0 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  scroll-snap-align: start;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -189,30 +225,48 @@ I am passionate about builiding my carrer in vlsi field,especially in areas like
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="content-box">
-      <ul style="list-style: none;">
-        <li><h4>"Home Automation using Alexa"</h4></li>
-        <P>I had done the project on “Home Automation Using Alexa”
+  
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-wrapper">
+    <div class="project-container">
+      <div class="project-card">
+        <h4>"Home Automation using Alexa"</h4>
+        <p>
           Designed and implemented a home automation system using voice commands through Alexa.
           Integrated smart devices to control lights and appliances remotely.
-          Applied basic IoT concepts and sensor interfacing for real-time device management.</P>
-          <img src="alexa.jpg">
-          <img src="syn.jpg">
+          Applied basic IoT concepts and sensor interfacing for real-time device management.
+        </p>
+        <img src="alexa.jpg" alt="Alexa Project">
+        <img src="syn.jpg" alt="Schematic">
+      </div>
 
-        <li><h4>"Pet Feeder using Arduino"</h4></li>
-        <P>An automatic pet feeder system is designed to feed pets at specific times without human intervention. It uses an Arduino microcontroller to control a motor that dispenses a set amount of food into a bowl.This system is especially helpful for pet owners who are busy or away from home, ensuring pets are fed regularly and accurately.</P>
-        <img src="ARM Project.png">
-        <img src="Arm.jpg">
-        <li><h4>"Road Lane Line Detection System"</h4></li>
-        <P>A road lane line detection system is a computer vision-based system used in autonomous vehicles or driver assistance systems to identify the lane markings on roads. It helps the vehicle stay within its lane and avoid unintentional lane departures.</P>
-        <img src="road.jpg">
-        <img src="all.jpg">
-        <img src="download.jpg">
-      </ul>
+      <div class="project-card">
+        <h4>"Pet Feeder using Arduino"</h4>
+        <p>
+          An automatic pet feeder system that feeds pets at specific times without human intervention,
+          controlled by an Arduino microcontroller. It ensures pets are fed regularly and accurately.
+        </p>
+        <img src="ARM Project.png" alt="ARM Project">
+        <img src="Arm.jpg" alt="ARM Circuit">
+      </div>
+
+      <div class="project-card">
+        <h4>"Road Lane Line Detection System"</h4>
+        <p>
+          A computer vision system for autonomous vehicles that detects lane markings and helps maintain lane discipline.
+          Implemented using Python-based image processing techniques.
+        </p>
+        <img src="road.jpg" alt="Road Detection">
+        <img src="all.jpg" alt="Output Example">
+        <img src="download.jpg" alt="Visualization">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Contact Section -->
   <section id="contact">
